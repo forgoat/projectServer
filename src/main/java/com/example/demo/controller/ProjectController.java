@@ -31,7 +31,13 @@ public class ProjectController {
 
     @RequiresPermissions("project:add")
     @PostMapping(value = "/project/add")
-    public JSONObject addProject(@Valid @RequestBody AddProjectReq addProjectReq){
+    public JSONObject addProject(Long organizationId,String projectZhName,String projectEnName,String description){
+        System.out.println("add project");
+        AddProjectReq addProjectReq=new AddProjectReq();
+        addProjectReq.setDescription(description);
+        addProjectReq.setOrganizationId(organizationId);
+        addProjectReq.setProjectEnName(projectEnName);
+        addProjectReq.setProjectZhName(projectZhName);
         return projectService.addProject(addProjectReq);
     }
 

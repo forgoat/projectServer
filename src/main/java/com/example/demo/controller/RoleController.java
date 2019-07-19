@@ -6,6 +6,7 @@ import com.example.demo.domain.RoleDo;
 import com.example.demo.domain.UserRoleDo;
 import com.example.demo.service.PermissionService;
 import com.example.demo.service.RoleService;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -22,13 +23,10 @@ public class RoleController {
     @Autowired
     private PermissionService permissionService;
 
-    @GetMapping(value = "/list")
-    public List<RoleDo> listRole(){
-        return roleService.listRole();
-    }
 
-    @GetMapping(value = "/list/project")
-    public List<RoleDo> listProjectRole(){
+    @RequiresPermissions("role:list")
+    @GetMapping(value = "/list")
+    public JSONObject listProjectRole(Integer pageNum,Integer pageRow){
         return roleService.listRoleByProject();
     }
     @PostMapping(value = "/addUserRole")

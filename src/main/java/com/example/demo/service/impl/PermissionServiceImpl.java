@@ -125,7 +125,7 @@ public class PermissionServiceImpl implements PermissionService {
         JSONObject jsonObject=new JSONObject();
         UserDo userDo=userDao.findById(userId).get(0);
         jsonObject.put("nickname",userDo.getNickname());
-        jsonObject.put("roleName","");
+        jsonObject.put("roleName","hasProject");
         List<PermissionDo> permissionDos=getUserProjectPermission(userId, projectId);
         if (permissionDos!=null) {
             Set<String> permissionList = new HashSet<String>();

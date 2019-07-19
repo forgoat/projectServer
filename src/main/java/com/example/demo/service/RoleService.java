@@ -11,5 +11,5 @@ public interface RoleService {
     public JSONObject addUserRole(UserRoleDo userRoleDo);
     public List<RoleDo> findByProjectId(Long projectId);
     public List<RoleDo> findByUserId(Long userId);
-    public List<RoleDo> listRoleByProject();
+    public JSONObject listRoleByProject();
 }

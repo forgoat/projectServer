@@ -54,9 +54,12 @@ public class RoleServiceImpl implements RoleService {
     }
 
     @Override
-    public List<RoleDo> listRoleByProject() {
+    public JSONObject listRoleByProject() {
         Session session= SecurityUtils.getSubject().getSession();
         Long projectId=(Long) session.getAttribute(Constants.SESSION_PROJECT_ID);
-        return roleDao.findByProjectId(projectId);
+        List<RoleDo> roleDos= roleDao.findByProjectId(projectId);
+        JSONObject jsonObject=new JSONObject();
+        jsonObject.put("list",roleDos);
+        return jsonObject;
     }
 }

@@ -112,3 +112,132 @@ org.springframework.http.converter.HttpMessageNotReadableException: Required req
 2019-07-19 04:20:10.132 INFO  --- [UserRealm.java:39][http-nio-8080-exec-7] - permission的值为:{"menuList":["project","permission","user"],"nickname":"Admin","roleName":"超级管理员","permissionList":["user:list","user:add","permission:list","project:list","project:add"]}
 2019-07-19 04:20:10.133 INFO  --- [UserRealm.java:40][http-nio-8080-exec-7] - 本用户权限为:[user:list, user:add, permission:list, project:list, project:add]
 2019-07-19 15:52:08.684 WARN  --- [HikariPool.java:766][HikariPool-1 housekeeper] - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=11h9m36s123ms).
+2019-07-19 16:23:42.627 INFO  --- [UserRealm.java:39][http-nio-8080-exec-8] - permission的值为:{"menuList":["project","permission","user"],"nickname":"Admin","roleName":"超级管理员","permissionList":["user:list","user:add","permission:list","project:list","project:add"]}
+2019-07-19 16:23:42.630 INFO  --- [UserRealm.java:40][http-nio-8080-exec-8] - 本用户权限为:[user:list, user:add, permission:list, project:list, project:add]
+2019-07-19 16:26:59.325 WARN  --- [AbstractHandlerExceptionResolver.java:194][http-nio-8080-exec-8] - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2019-07-19 16:28:59.003 INFO  --- [HikariDataSource.java:350][Thread-23] - HikariPool-1 - Shutdown initiated...
+2019-07-19 16:28:59.016 INFO  --- [HikariDataSource.java:352][Thread-23] - HikariPool-1 - Shutdown completed.
+2019-07-19 16:29:21.624 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting DemoApplication on lins-MacBook-Air.local with PID 6613 (/Users/L/gitProject/new/demo/target/classes started by L in /Users/L/gitProject/new/demo)
+2019-07-19 16:29:21.635 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-07-19 16:29:30.076 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started DemoApplication in 9.918 seconds (JVM running for 12.343)
+2019-07-19 16:29:54.708 INFO  --- [HikariDataSource.java:110][http-nio-8080-exec-2] - HikariPool-1 - Starting...
+2019-07-19 16:29:55.456 INFO  --- [HikariDataSource.java:123][http-nio-8080-exec-2] - HikariPool-1 - Start completed.
+2019-07-19 16:32:41.160 WARN  --- [HikariPool.java:766][HikariPool-1 housekeeper] - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m15s586ms).
+2019-07-19 16:47:48.892 INFO  --- [HikariDataSource.java:350][Thread-11] - HikariPool-1 - Shutdown initiated...
+2019-07-19 16:47:48.926 INFO  --- [HikariDataSource.java:352][Thread-11] - HikariPool-1 - Shutdown completed.
+2019-07-19 16:48:02.627 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting DemoApplication on lins-MacBook-Air.local with PID 7043 (/Users/L/gitProject/new/demo/target/classes started by L in /Users/L/gitProject/new/demo)
+2019-07-19 16:48:02.644 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-07-19 16:48:10.393 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started DemoApplication in 9.105 seconds (JVM running for 11.409)
+2019-07-19 16:49:12.681 INFO  --- [HikariDataSource.java:110][http-nio-8080-exec-2] - HikariPool-1 - Starting...
+2019-07-19 16:49:12.904 INFO  --- [HikariDataSource.java:123][http-nio-8080-exec-2] - HikariPool-1 - Start completed.
+2019-07-19 16:59:54.681 INFO  --- [HikariDataSource.java:350][Thread-30] - HikariPool-1 - Shutdown initiated...
+2019-07-19 16:59:54.708 INFO  --- [HikariDataSource.java:352][Thread-30] - HikariPool-1 - Shutdown completed.
+2019-07-19 17:00:05.208 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting DemoApplication on lins-MacBook-Air.local with PID 7286 (/Users/L/gitProject/new/demo/target/classes started by L in /Users/L/gitProject/new/demo)
+2019-07-19 17:00:05.240 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-07-19 17:00:11.685 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started DemoApplication in 7.51 seconds (JVM running for 9.849)
+2019-07-19 17:01:14.154 ERROR --- [GlobalExceptionHandler.java:43][http-nio-8080-exec-1] - 异常
+java.lang.NullPointerException: null
+	at com.example.demo.service.impl.ProjectServiceImpl.findByUser(ProjectServiceImpl.java:61)
+	at com.example.demo.controller.ProjectController.findProjectByUserId(ProjectController.java:46)
+	at com.example.demo.controller.ProjectController$$FastClassBySpringCGLIB$$99a1c61d.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:684)
+	at com.example.demo.controller.ProjectController$$EnhancerBySpringCGLIB$$2398539f.findProjectByUserId(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:215)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:142)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:998)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:890)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:875)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:770)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2019-07-19 17:01:14.231 WARN  --- [AbstractHandlerExceptionResolver.java:194][http-nio-8080-exec-1] - Resolved [java.lang.NullPointerException]
+2019-07-19 17:01:20.698 INFO  --- [HikariDataSource.java:110][http-nio-8080-exec-5] - HikariPool-1 - Starting...
+2019-07-19 17:01:21.029 INFO  --- [HikariDataSource.java:123][http-nio-8080-exec-5] - HikariPool-1 - Start completed.
+2019-07-19 17:06:25.665 INFO  --- [UserRealm.java:39][http-nio-8080-exec-5] - permission的值为:{"menuList":["project","permission","user"],"nickname":"Admin","roleName":"超级管理员","permissionList":["user:list","user:add","permission:list","project:list","project:add"]}
+2019-07-19 17:06:25.668 INFO  --- [UserRealm.java:40][http-nio-8080-exec-5] - 本用户权限为:[user:list, user:add, permission:list, project:list, project:add]
+2019-07-19 17:06:34.821 INFO  --- [UserRealm.java:39][http-nio-8080-exec-7] - permission的值为:{"menuList":["project","permission","user"],"nickname":"Admin","roleName":"hasProject","permissionList":["user:list","permission:list","project:list"]}
+2019-07-19 17:06:34.823 INFO  --- [UserRealm.java:40][http-nio-8080-exec-7] - 本用户权限为:[user:list, permission:list, project:list]
+2019-07-19 17:11:05.477 INFO  --- [UserRealm.java:39][http-nio-8080-exec-3] - permission的值为:{"menuList":["role","project","permission","user"],"nickname":"Admin","roleName":"hasProject","permissionList":["user:list","permission:list","role:list","project:list"]}
+2019-07-19 17:11:05.483 INFO  --- [UserRealm.java:40][http-nio-8080-exec-3] - 本用户权限为:[user:list, permission:list, role:list, project:list]
+2019-07-19 17:11:12.351 INFO  --- [UserRealm.java:39][http-nio-8080-exec-6] - permission的值为:{"menuList":["role","project","permission","user"],"nickname":"Admin","roleName":"hasProject","permissionList":["user:list","permission:list","role:list","project:list"]}
+2019-07-19 17:11:12.354 INFO  --- [UserRealm.java:40][http-nio-8080-exec-6] - 本用户权限为:[user:list, permission:list, role:list, project:list]
+2019-07-19 17:11:32.662 INFO  --- [UserRealm.java:39][http-nio-8080-exec-7] - permission的值为:{"menuList":["role","project","permission","user"],"nickname":"Admin","roleName":"hasProject","permissionList":["user:list","permission:list","role:list","project:list"]}
+2019-07-19 17:11:32.663 INFO  --- [UserRealm.java:40][http-nio-8080-exec-7] - 本用户权限为:[user:list, permission:list, role:list, project:list]
+2019-07-19 17:17:06.242 INFO  --- [HikariDataSource.java:350][Thread-28] - HikariPool-1 - Shutdown initiated...
+2019-07-19 17:17:06.293 INFO  --- [HikariDataSource.java:352][Thread-28] - HikariPool-1 - Shutdown completed.
+2019-07-19 17:17:18.670 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting DemoApplication on lins-MacBook-Air.local with PID 7713 (/Users/L/gitProject/new/demo/target/classes started by L in /Users/L/gitProject/new/demo)
+2019-07-19 17:17:18.678 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-07-19 17:17:23.102 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started DemoApplication in 5.224 seconds (JVM running for 6.817)
+2019-07-19 17:17:49.560 INFO  --- [HikariDataSource.java:110][http-nio-8080-exec-2] - HikariPool-1 - Starting...
+2019-07-19 17:17:49.817 INFO  --- [HikariDataSource.java:123][http-nio-8080-exec-2] - HikariPool-1 - Start completed.
+2019-07-19 17:17:58.311 INFO  --- [UserRealm.java:39][http-nio-8080-exec-6] - permission的值为:{"menuList":["role","project","permission","user"],"nickname":"Admin","roleName":"hasProject","permissionList":["user:list","permission:list","role:list","project:list"]}
+2019-07-19 17:17:58.313 INFO  --- [UserRealm.java:40][http-nio-8080-exec-6] - 本用户权限为:[user:list, permission:list, role:list, project:list]
+2019-07-19 17:18:57.374 INFO  --- [UserRealm.java:39][http-nio-8080-exec-8] - permission的值为:{"menuList":["role","project","permission","user"],"nickname":"Admin","roleName":"超级管理员","permissionList":["user:list","user:add","permission:list","role:list","project:list","role:add","project:add"]}
+2019-07-19 17:18:57.375 INFO  --- [UserRealm.java:40][http-nio-8080-exec-8] - 本用户权限为:[user:list, user:add, permission:list, role:list, project:list, role:add, project:add]
+2019-07-19 17:18:59.882 INFO  --- [UserRealm.java:39][http-nio-8080-exec-10] - permission的值为:{"menuList":["role","project","permission","user"],"nickname":"Admin","roleName":"超级管理员","permissionList":["user:list","user:add","permission:list","role:list","project:list","role:add","project:add"]}
+2019-07-19 17:18:59.883 INFO  --- [UserRealm.java:40][http-nio-8080-exec-10] - 本用户权限为:[user:list, user:add, permission:list, role:list, project:list, role:add, project:add]
+2019-07-19 17:19:00.779 INFO  --- [UserRealm.java:39][http-nio-8080-exec-2] - permission的值为:{"menuList":["role","project","permission","user"],"nickname":"Admin","roleName":"超级管理员","permissionList":["user:list","user:add","permission:list","role:list","project:list","role:add","project:add"]}
+2019-07-19 17:19:00.780 INFO  --- [UserRealm.java:40][http-nio-8080-exec-2] - 本用户权限为:[user:list, user:add, permission:list, role:list, project:list, role:add, project:add]
+2019-07-19 17:19:55.822 INFO  --- [UserRealm.java:39][http-nio-8080-exec-9] - permission的值为:{"menuList":["role","project","permission","user"],"nickname":"Admin","roleName":"hasProject","permissionList":["user:list","permission:list","role:list","project:list"]}
+2019-07-19 17:19:55.823 INFO  --- [UserRealm.java:40][http-nio-8080-exec-9] - 本用户权限为:[user:list, permission:list, role:list, project:list]
