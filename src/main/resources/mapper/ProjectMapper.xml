@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.demo.dao.ProjectDao">
+    <resultMap id="BaseResultMap" type="com.example.demo.domain.ProjectDo" >
+        <id column="id" property="id" jdbcType="BIGINT" />
+        <result column="organization_id" property="organizationId" jdbcType="BIGINT" />
+        <result column="project_zh_name" property="projectZhName" jdbcType="VARCHAR" />
+        <result column="project_en_name" property="projectEnName" jdbcType="VARCHAR" />
+        <result column="description" property="description" jdbcType="VARCHAR" />
+        <result column="create_time" property="createTime" jdbcType="BIGINT" />
+        <result column="update_time" property="updateTime" jdbcType="BIGINT" />
+    </resultMap>
+    <sql id="Base_Column_List" >
+    id,organization_id,project_zh_name,project_en_name,description,create_time,update_time
+  </sql>
+    <select id="listProject" resultMap="BaseResultMap">
+        SELECT
+        <include refid="Base_Column_List" />
+        FROM project
+    </select>
+    <insert id="addProject" parameterType="com.example.demo.domain.ProjectDo">
+        INSERT INTO project(id,organization_id,project_zh_name,project_en_name,description,create_time,update_time)
+        VALUES (#{id,jdbcType=BIGINT},#{organizationId,jdbcType=BIGINT},#{projectZhName,jdbcType=VARCHAR},#{projectEnName,jdbcType=VARCHAR},#{description,jdbcType=VARCHAR},#{createTime,jdbcType=BIGINT},#{updateTime,jdbcType=BIGINT})
+    </insert>
+    <select id="findProjectById" resultMap="BaseResultMap" parameterType="java.lang.Long">
+        SELECT
+        <include refid="Base_Column_List" />
+        FROM project
+        WHERE id=#{id}
+    </select>
+</mapper>

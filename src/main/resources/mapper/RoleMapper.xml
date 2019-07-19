@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.demo.dao.RoleDao">
+    <resultMap id="BaseResultMap" type="com.example.demo.domain.RoleDo" >
+        <id column="id" property="id" jdbcType="BIGINT" />
+        <result column="project_id" property="projectId" jdbcType="BIGINT" />
+        <result column="role_name" property="roleName" jdbcType="VARCHAR" />
+        <result column="status" property="status" jdbcType="INTEGER" />
+        <result column="create_time" property="createTime" jdbcType="BIGINT" />
+        <result column="update_time" property="updateTime" jdbcType="BIGINT" />
+    </resultMap>
+    <sql id="Base_Column_List" >
+    id,project_id,role_name,status,create_time,update_time
+  </sql>
+    <select id="listRole" resultMap="BaseResultMap">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM role
+    </select>
+    <select id="findById" resultMap="BaseResultMap" parameterType="java.lang.Long">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM role
+        WHERE id=#{id}
+    </select>
+    <select id="findByProjectId" parameterType="java.lang.Long" resultMap="BaseResultMap">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM role
+        WHERE project_id=#{projectId}
+    </select>
+    <insert id="addRole" parameterType="com.example.demo.domain.RoleDo">
+        INSERT INTO role(id,project_id,role_name,status,create_time,update_time)
+        VALUES (#{id,jdbcType=BIGINT},#{projectId,jdbcType=BIGINT},#{roleName,jdbcType=VARCHAR},#{status,jdbcType=INTEGER},#{createTime,jdbcType=BIGINT},#{updateTime,jdbcType=BIGINT})
+    </insert>
+</mapper>

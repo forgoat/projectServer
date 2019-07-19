@@ -1,0 +1,114 @@
+2019-07-19 00:11:56.689 INFO  --- [HikariDataSource.java:350][Thread-26] - HikariPool-1 - Shutdown initiated...
+2019-07-19 00:11:56.717 INFO  --- [HikariDataSource.java:352][Thread-26] - HikariPool-1 - Shutdown completed.
+2019-07-19 00:18:21.800 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting DemoApplication on lins-MacBook-Air.local with PID 1564 (/Users/L/gitProject/new/demo/target/classes started by L in /Users/L/gitProject/new/demo)
+2019-07-19 00:18:21.810 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-07-19 00:18:28.451 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started DemoApplication in 7.946 seconds (JVM running for 10.281)
+2019-07-19 00:30:19.330 INFO  --- [HikariDataSource.java:110][http-nio-8080-exec-4] - HikariPool-1 - Starting...
+2019-07-19 00:30:19.860 INFO  --- [HikariDataSource.java:123][http-nio-8080-exec-4] - HikariPool-1 - Start completed.
+2019-07-19 00:34:25.426 ERROR --- [GlobalExceptionHandler.java:43][http-nio-8080-exec-10] - 异常
+org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public com.alibaba.fastjson.JSONObject com.example.demo.controller.LoginController.authLogin(com.alibaba.fastjson.JSONObject)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:160)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:130)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:124)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:165)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:998)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:901)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:875)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:770)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2019-07-19 00:34:25.433 WARN  --- [AbstractHandlerExceptionResolver.java:194][http-nio-8080-exec-10] - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public com.alibaba.fastjson.JSONObject com.example.demo.controller.LoginController.authLogin(com.alibaba.fastjson.JSONObject)]
+2019-07-19 00:50:32.568 INFO  --- [HikariDataSource.java:350][Thread-29] - HikariPool-1 - Shutdown initiated...
+2019-07-19 00:50:32.588 INFO  --- [HikariDataSource.java:352][Thread-29] - HikariPool-1 - Shutdown completed.
+2019-07-19 00:50:41.018 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting DemoApplication on lins-MacBook-Air.local with PID 2229 (/Users/L/gitProject/new/demo/target/classes started by L in /Users/L/gitProject/new/demo)
+2019-07-19 00:50:41.031 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-07-19 00:50:44.726 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started DemoApplication in 4.345 seconds (JVM running for 5.706)
+2019-07-19 00:54:42.055 INFO  --- [HikariDataSource.java:110][http-nio-8080-exec-2] - HikariPool-1 - Starting...
+2019-07-19 00:54:42.324 INFO  --- [HikariDataSource.java:123][http-nio-8080-exec-2] - HikariPool-1 - Start completed.
+2019-07-19 00:58:22.563 INFO  --- [HikariDataSource.java:350][Thread-20] - HikariPool-1 - Shutdown initiated...
+2019-07-19 00:58:22.579 INFO  --- [HikariDataSource.java:352][Thread-20] - HikariPool-1 - Shutdown completed.
+2019-07-19 00:58:30.071 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting DemoApplication on lins-MacBook-Air.local with PID 2375 (/Users/L/gitProject/new/demo/target/classes started by L in /Users/L/gitProject/new/demo)
+2019-07-19 00:58:30.076 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-07-19 00:58:35.049 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started DemoApplication in 5.659 seconds (JVM running for 7.095)
+2019-07-19 00:59:52.259 INFO  --- [HikariDataSource.java:110][http-nio-8080-exec-2] - HikariPool-1 - Starting...
+2019-07-19 00:59:52.514 INFO  --- [HikariDataSource.java:123][http-nio-8080-exec-2] - HikariPool-1 - Start completed.
+2019-07-19 02:07:53.438 WARN  --- [HikariPool.java:766][HikariPool-1 housekeeper] - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m30s424ms).
+2019-07-19 02:34:01.872 INFO  --- [HikariDataSource.java:350][Thread-23] - HikariPool-1 - Shutdown initiated...
+2019-07-19 02:34:01.886 INFO  --- [HikariDataSource.java:352][Thread-23] - HikariPool-1 - Shutdown completed.
+2019-07-19 02:34:09.727 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting DemoApplication on lins-MacBook-Air.local with PID 4148 (/Users/L/gitProject/new/demo/target/classes started by L in /Users/L/gitProject/new/demo)
+2019-07-19 02:34:09.732 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-07-19 02:34:15.351 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started DemoApplication in 6.251 seconds (JVM running for 7.81)
+2019-07-19 02:54:57.140 INFO  --- [HikariDataSource.java:110][http-nio-8080-exec-2] - HikariPool-1 - Starting...
+2019-07-19 02:54:57.471 INFO  --- [HikariDataSource.java:123][http-nio-8080-exec-2] - HikariPool-1 - Start completed.
+2019-07-19 02:59:11.702 INFO  --- [UserRealm.java:39][http-nio-8080-exec-10] - permission的值为:{"menuList":["project","permission","user"],"nickname":"Admin","roleName":"超级管理员","permissionList":["user:list","user:add","permission:list","project:list","project:add"]}
+2019-07-19 02:59:11.704 INFO  --- [UserRealm.java:40][http-nio-8080-exec-10] - 本用户权限为:[user:list, user:add, permission:list, project:list, project:add]
+2019-07-19 03:29:34.872 WARN  --- [HikariPool.java:766][HikariPool-1 housekeeper] - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=29m37s274ms).
+2019-07-19 03:30:50.411 INFO  --- [UserRealm.java:39][http-nio-8080-exec-5] - permission的值为:{"menuList":["project","permission","user"],"nickname":"Admin","roleName":"超级管理员","permissionList":["user:list","user:add","permission:list","project:list","project:add"]}
+2019-07-19 03:30:50.411 INFO  --- [UserRealm.java:40][http-nio-8080-exec-5] - 本用户权限为:[user:list, user:add, permission:list, project:list, project:add]
+2019-07-19 03:36:26.472 INFO  --- [HikariDataSource.java:350][Thread-24] - HikariPool-1 - Shutdown initiated...
+2019-07-19 03:36:26.500 INFO  --- [HikariDataSource.java:352][Thread-24] - HikariPool-1 - Shutdown completed.
+2019-07-19 03:36:35.464 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting DemoApplication on lins-MacBook-Air.local with PID 4898 (/Users/L/gitProject/new/demo/target/classes started by L in /Users/L/gitProject/new/demo)
+2019-07-19 03:36:35.486 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-07-19 03:36:40.292 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started DemoApplication in 5.702 seconds (JVM running for 7.344)
+2019-07-19 04:20:01.431 INFO  --- [HikariDataSource.java:110][http-nio-8080-exec-2] - HikariPool-1 - Starting...
+2019-07-19 04:20:01.718 INFO  --- [HikariDataSource.java:123][http-nio-8080-exec-2] - HikariPool-1 - Start completed.
+2019-07-19 04:20:10.132 INFO  --- [UserRealm.java:39][http-nio-8080-exec-7] - permission的值为:{"menuList":["project","permission","user"],"nickname":"Admin","roleName":"超级管理员","permissionList":["user:list","user:add","permission:list","project:list","project:add"]}
+2019-07-19 04:20:10.133 INFO  --- [UserRealm.java:40][http-nio-8080-exec-7] - 本用户权限为:[user:list, user:add, permission:list, project:list, project:add]
+2019-07-19 15:52:08.684 WARN  --- [HikariPool.java:766][HikariPool-1 housekeeper] - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=11h9m36s123ms).

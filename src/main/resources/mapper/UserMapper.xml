@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.demo.dao.UserDao">
+    <resultMap id="BaseResultMap" type="com.example.demo.domain.UserDo" >
+        <id column="id" property="id" jdbcType="BIGINT" />
+        <result column="username" property="username" jdbcType="VARCHAR" />
+        <result column="password" property="password" jdbcType="VARCHAR" />
+        <result column="nickname" property="nickname" jdbcType="VARCHAR" />
+        <result column="status" property="status" jdbcType="INTEGER" />
+        <result column="salt" property="salt" jdbcType="VARCHAR" />
+        <result column="create_time" property="createTime" jdbcType="BIGINT" />
+        <result column="update_time" property="updateTime" jdbcType="BIGINT" />
+    </resultMap>
+    <sql id="Base_Column_List" >
+    id, username,password,nickname,status,salt,create_time,update_time
+  </sql>
+    <select id="listUser" resultMap="BaseResultMap">
+        SELECT
+        <include refid="Base_Column_List" />
+         FROM user;
+    </select>
+    <insert id="addUser" parameterType="com.example.demo.domain.UserDo" keyProperty="id" useGeneratedKeys="true">
+        insert into user(id,username,password,nickname,status,salt,create_time,update_time)
+    values (#{id,jdbcType=BIGINT},#{username,jdbcType=VARCHAR},#{password,jdbcType=VARCHAR},#{nickname,jdbcType=VARCHAR},#{status,jdbcType=INTEGER},#{salt,jdbcType=VARCHAR},#{createTime,jdbcType=BIGINT},#{updateTime,jdbcType=BIGINT})
+    </insert>
+    <select id="getUser" resultMap="BaseResultMap">
+        SELECT
+        <include refid="Base_Column_List" />
+        FROM user
+        where username=#{username} and password=#{password}
+    </select>
+    <select id="findById" resultMap="BaseResultMap">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM user
+        WHERE id=#{id}
+    </select>
+</mapper>

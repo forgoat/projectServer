@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.demo.dao.PermissionDao">
+    <resultMap id="BaseResultMap" type="com.example.demo.domain.PermissionDo" >
+        <id column="id" property="id" jdbcType="BIGINT" />
+        <result column="menu_code" property="menuCode" jdbcType="VARCHAR" />
+        <result column="menu_name" property="menuName" jdbcType="VARCHAR" />
+        <result column="permission_code" property="permissionCode" jdbcType="VARCHAR" />
+        <result column="permission_name" property="permissionName" jdbcType="VARCHAR" />
+        <result column="required_permission" property="requiredPermission" jdbcType="TINYINT" />
+        <result column="create_time" property="createTime" jdbcType="BIGINT" />
+        <result column="update_time" property="updateTime" jdbcType="BIGINT" />
+    </resultMap>
+    <sql id="Base_Column_List" >
+    id,menu_code,menu_name,permission_code,permission_name,required_permission,create_time,update_time
+  </sql>
+    <select id="listPermission" resultMap="BaseResultMap">
+        SELECT
+        <include refid="Base_Column_List" />
+        FROM permission
+    </select>
+    <insert id="addPermission" useGeneratedKeys="true" keyProperty="id" parameterType="com.example.demo.domain.PermissionDo">
+        INSERT INTO permission(id, menu_code,menu_name,permission_code,permission_name,required_permission,create_time,update_time)
+    values (#{id,jdbcType=BIGINT},#{menuCode,jdbcType=VARCHAR},#{menuName,jdbcType=VARCHAR},#{permissionCode,jdbcType=VARCHAR},#{permissionName,jdbcType=VARCHAR},#{requiredPermission,jdbcType=VARCHAR},#{createTime,jdbcType=BIGINT},#{updateTime,jdbcType=BIGINT})
+    </insert>
+    <select id="findById" parameterType="java.lang.Long" resultMap="BaseResultMap">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM  permission
+        WHERE id=#{id}
+    </select>
+</mapper>
