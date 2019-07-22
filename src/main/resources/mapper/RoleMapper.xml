@@ -28,7 +28,6 @@
         <include refid="Base_Column_List"/>
         FROM role
         WHERE project_id=#{projectId}
-        limit
     </select>
     <insert id="addRole" parameterType="com.example.demo.domain.RoleDo">
         INSERT INTO role(id,project_id,role_name,status,create_time,update_time)

@@ -11,6 +11,6 @@ public interface RoleDao {
     public List<RoleDo> listRole();
     public int addRole(RoleDo roleDo);
     public List<RoleDo> findById(Long id);
-    public List<RoleDo> findByProjectId(Long projectId,Integer pageNum,Integer pageRow);
+    public List<RoleDo> findByProjectId(Long projectId);
 
 }
